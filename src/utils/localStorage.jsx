@@ -1,8 +1,8 @@
 const employees = [
     {
         "id": 1,
-        "firstName": "Keshav",
-        "email": "Keshav@e1.com",
+        "firstName": "Gourav",
+        "email": "gourav@e1.com",
         "password": "123",
         "taskCounts": {
             "active": 2,
@@ -46,7 +46,7 @@ const employees = [
     },
     {
         "id": 2,
-        "firstName": "Aayush",
+        "firstName": "Deep",
         "email": "Aayush@e2.com",
         "password": "123",
         "taskCounts": {
@@ -125,7 +125,7 @@ const employees = [
     {
         "id": 4,
         "firstName": "Deepanshi",
-        "email": "Deepanshi@e4.com",
+        "email": "deepanshi@e4.com",
         "password": "123",
         "taskCounts": {
             "active": 2,
@@ -158,8 +158,8 @@ const employees = [
     },
     {
         "id": 5,
-        "firstName": "Ranya",
-        "email": "Ranya@e5.com",
+        "firstName": "Lochan",
+        "email": "lochan@e5.com",
         "password": "123",
         "taskCounts": {
             "active": 2,
