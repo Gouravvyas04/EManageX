@@ -1,10 +1,11 @@
 {
-  "homepage": "https://github.com/Gouravvyas04/EManageX.git",
+  "homepage": "https://Gouravvyas04.github.io/EManageX",
   "name": "emanagex",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "vite --host",
