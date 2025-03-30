@@ -57,6 +57,20 @@ const AdminDashboard = ({ changeUser }) => {
                     </section>
                 )}
 
+                 {/* View Progress Stats Button */}
+                {!showCreateEmployeeForm && (
+                    <div className="flex justify-center mt-6">
+                        <button
+                            onClick={() => setShowProgressPopup(true)}
+                            className="bg-[#222636] text-[#F4F7FF] py-2 px-4 rounded-lg text-lg font-semibold shadow-md hover:shadow-xl transition-all transform hover:scale-105"
+                        >
+                            View Progress Stats
+                        </button>
+                    </div>
+                )}
+
+                {showProgressPopup && <EmployeeProgressGraph onClose={() => setShowProgressPopup(false)} />}
+
                 {/* Add Employee Button */}
                 {!showCreateEmployeeForm && (
                     <div className="flex justify-center">
@@ -76,19 +90,6 @@ const AdminDashboard = ({ changeUser }) => {
                     </section>
                 )}
 
-                {/* View Progress Stats Button */}
-                {!showCreateEmployeeForm && (
-                    <div className="flex justify-center mt-6">
-                        <button
-                            onClick={() => setShowProgressPopup(true)}
-                            className="bg-[#222636] text-[#F4F7FF] py-2 px-4 rounded-lg text-lg font-semibold shadow-md hover:shadow-xl transition-all transform hover:scale-105"
-                        >
-                            View Progress Stats
-                        </button>
-                    </div>
-                )}
-
-                {showProgressPopup && <EmployeeProgressGraph onClose={() => setShowProgressPopup(false)} />}
 
                 {/* All Tasks Section */}
                 <section className="bg-[#222636] p-10 rounded-lg shadow-xl">
