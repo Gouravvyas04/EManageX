@@ -15,6 +15,8 @@ Welcome to **EManageX**, a powerful web application designed to streamline emplo
 ---
 
 ## 🔐 User Login Credentials
+![Screenshot 2025-03-30 194957](https://github.com/user-attachments/assets/f58db488-06f2-426e-8873-dfc252c05c2e)
+
 
 ### 👨‍💼 Admin Login
 - **Email:** `admin@me.com`
@@ -32,12 +34,14 @@ Welcome to **EManageX**, a powerful web application designed to streamline emplo
 ---
 
 ## 📜 Installation & Setup
+## 🚀 Getting Started
 
-1. **Clone the Repository:**
-   ```sh
-  (https://github.com/Gouravvyas04/EManageX)
-   cd EManageX
-   ```
+1. **Clone the Repository**
+
+```bash
+git clone https://github.com/Gouravvyas04/EManageX.git 
+cd EManageX
+```
 
 2. **Install Dependencies:**
    ```sh
@@ -57,24 +61,49 @@ Welcome to **EManageX**, a powerful web application designed to streamline emplo
 - Assign tasks to employees.
 - Monitor task progress and completion status.
 - Manage employee details.
+  ![Screenshot 2025-03-30 195051](https://github.com/user-attachments/assets/daf2fb71-4bf2-47e9-bd42-b5ae6418cefd)
 
 ### 🔹 Employee Dashboard
 - View assigned tasks.
 - Update task status (completed/failed).
 - Attach files to tasks if required.
+ ![Screenshot 2025-03-30 195435](https://github.com/user-attachments/assets/71abcd55-bbaa-495f-af83-e2f98f3f0443)
 
 ---
 
 ## 📸 Screenshots (Coming Soon!)
+**Admin Dashboard**
 
----
+-When Admin Creates a task: 
 
-## 🤝 Contributing
-Feel free to fork this repository and contribute by submitting pull requests. Any suggestions or improvements are welcome!
+ ![Screenshot 2025-03-30 195137](https://github.com/user-attachments/assets/57fd754c-09f5-4e5c-bd57-93725e2022b2)
+
+-When Wants to see All Tasks or Task Overview:
+
+ ![Screenshot 2025-03-30 195113](https://github.com/user-attachments/assets/6d449c61-e5ec-40d3-b11e-dd694c8a6934)
+
+-When Admin Clicks the View Progress Button to see and analyze the Progress:
+
+ ![Screenshot 2025-03-30 195329](https://github.com/user-attachments/assets/4be72d3b-9347-43d1-84e7-71ec1f6a188a)
+
+-When Admin Wants to add an Employee:
+
+ ![Screenshot 2025-03-30 195156](https://github.com/user-attachments/assets/0eb94cd9-e138-43d8-841f-1c6529169bc7)
+
+**Employee Dashboard**
+
+-When a new task is assigned:
+
+ ![Screenshot 2025-03-30 195539](https://github.com/user-attachments/assets/f3360c4a-f6a2-4dc7-babb-f2ac4d3ac371)
+
+-When Employee wants to view their progress and particular parameters:
+
+ ![Screenshot 2025-03-30 195614](https://github.com/user-attachments/assets/006c24a3-2559-4adb-b8cc-40d56902436e)
 
 ---
 
 ## 🛠️ Technologies Used
+
 - **Frontend:** React.js, Tailwind CSS
 - **Backend:** Local Storage for Data Persistence
 - **Authentication:** Role-Based Login System
@@ -83,6 +112,11 @@ Feel free to fork this repository and contribute by submitting pull requests. An
 
 ## 📧 Contact
 For any queries or suggestions, reach out to **[Gourav Vyas]** at `gouravvyas542@gmail.com`.
+
+---
+
+## 🤝 Contributing
+Feel free to fork this repository and contribute by submitting pull requests. Any suggestions or improvements are welcome!
 
 ---
 
