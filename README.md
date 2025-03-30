@@ -35,8 +35,8 @@ Welcome to **EManageX**, a powerful web application designed to streamline emplo
 
 1. **Clone the Repository:**
    ```sh
-   git clone https://github.com/your-repo/coreStaff.git
-   cd coreStaff
+  (https://github.com/Gouravvyas04/EManageX)
+   cd EManageX
    ```
 
 2. **Install Dependencies:**
@@ -46,7 +46,7 @@ Welcome to **EManageX**, a powerful web application designed to streamline emplo
 
 3. **Start the Development Server:**
    ```sh
-   npm start
+   npm run dev
    ```
 
 ---
