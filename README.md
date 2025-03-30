@@ -104,6 +104,10 @@ cd EManageX
 
 ![Screenshot 2025-03-30 233642](https://github.com/user-attachments/assets/cca0675a-eeba-408e-853f-e35292610da0)
 
+-When employee login they get a pop up like this, and currently working on sending real time notifications if the tasks are pending:
+
+![Screenshot 2025-03-30 235118](https://github.com/user-attachments/assets/ad99b610-3885-4d4c-9144-0510999c77ee)
+
 ---
 
 ## 🛠️ Technologies Used
