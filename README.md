@@ -100,6 +100,10 @@ cd EManageX
 
  ![Screenshot 2025-03-30 195614](https://github.com/user-attachments/assets/006c24a3-2559-4adb-b8cc-40d56902436e)
 
+ -When the deadline is less then or 3 days then it starts showing coutdown of deadline. And on the day of deadline it starts blinking:
+
+![Screenshot 2025-03-30 233642](https://github.com/user-attachments/assets/cca0675a-eeba-408e-853f-e35292610da0)
+
 ---
 
 ## 🛠️ Technologies Used
