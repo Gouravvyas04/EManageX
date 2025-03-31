@@ -54,14 +54,14 @@ const App = () => {
               !user ? (
                 <Login handleLogin={handleLogin} />
               ) : (
-                <Navigate to={user === "admin" ? "/EManageX/admin" : "/EManageX/employee"} replace />
+                <Navigate to={user === "admin" ? "/admin" : "/employee"} replace />
               )
             }
           />
 
           {/* Admin Dashboard Route */}
           <Route
-            path="/EManageX/admin"
+            path="/admin"
             element={
               user === "admin" ? (
                 <AdminDashboard changeUser={setUser} />
@@ -73,7 +73,7 @@ const App = () => {
 
           {/* Employee Dashboard Route */}
           <Route
-            path="/EManageX/employee"
+            path="/employee"
             element={
               user === "employee" ? (
                 <EmployeeDashboard changeUser={setUser} data={loggedInUserData} />
