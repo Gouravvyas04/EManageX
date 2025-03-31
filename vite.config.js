@@ -3,12 +3,13 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: "/", // Correct base path for Render deployment
+  base: "/EManageX/", // Ensure base path is set correctly
   build: {
-    outDir: "dist", // Ensure build files go into the correct directory
-    assetsDir: "assets", // Keeps assets organized
+    outDir: "dist",
+    assetsDir: "assets",
   },
   server: {
-    port: 3000, // Optional: Set a local dev port
+    port: 3000,
+    historyApiFallback: true, // This helps with React Router issues in local dev mode
   },
 });
