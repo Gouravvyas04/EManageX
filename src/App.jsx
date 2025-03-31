@@ -48,28 +48,11 @@ const App = () => {
         <Toaster />
         <Routes>
           {/* Redirect to login if not logged in */}
-          <Route
-            path="/"
-            element={
-              !user ? (
-                <Login handleLogin={handleLogin} />
-              ) : (
-                <Navigate to={user === "admin" ? "/admin" : "/employee"} replace />
-              )
-            }
-          />
+          <Route path="/" element={!user ? <Login handleLogin={handleLogin} /> :  <Navigate to={user === "admin" ? "/admin" : "/employee"} replace />}/>
 
           {/* Admin Dashboard Route */}
           <Route
-            path="/admin"
-            element={
-              user === "admin" ? (
-                <AdminDashboard changeUser={setUser} />
-              ) : (
-                <Navigate to="/" replace />
-              )
-            }
-          />
+            path="/admin" element={ user === "admin" ? <AdminDashboard changeUser={setUser} /> : <Navigate to="/" replace />}/>
 
           {/* Employee Dashboard Route */}
           <Route
