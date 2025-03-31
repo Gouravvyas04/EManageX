@@ -9,7 +9,7 @@ import { Toaster } from 'react-hot-toast';
 import { validateCredentials } from './utils/authUtils';
 
 const App = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState("");
   const [loggedInUserData, setLoggedInUserData] = useState(null);
   const [userData] = useContext(AuthContext);
 
@@ -42,26 +42,19 @@ const App = () => {
     return false;
   };
 
-  const getStoredUser = () => {
-    const storedUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    return storedUser ? storedUser.role : null;
-  };
-
   return (
     <Router>
       <div className='bg-[#0a0a0a] min-h-screen'>
         <Toaster />
         <Routes>
-          {/* Redirect to respective dashboards if logged in, else go to login */}
+          {/* Redirect to login if not logged in */}
           <Route
             path="/"
             element={
-              getStoredUser() === "admin" ? (
-                <Navigate to="/admin" replace />
-              ) : getStoredUser() === "employee" ? (
-                <Navigate to="/employee" replace />
-              ) : (
+              !user ? (
                 <Login handleLogin={handleLogin} />
+              ) : (
+                <Navigate to={user === "admin" ? "/admin" : "/employee"} replace />
               )
             }
           />
@@ -70,7 +63,7 @@ const App = () => {
           <Route
             path="/admin"
             element={
-              getStoredUser() === "admin" ? (
+              user === "admin" ? (
                 <AdminDashboard changeUser={setUser} />
               ) : (
                 <Navigate to="/" replace />
@@ -82,7 +75,7 @@ const App = () => {
           <Route
             path="/employee"
             element={
-              getStoredUser() === "employee" ? (
+              user === "employee" ? (
                 <EmployeeDashboard changeUser={setUser} data={loggedInUserData} />
               ) : (
                 <Navigate to="/" replace />
@@ -91,7 +84,7 @@ const App = () => {
           />
 
           {/* Catch-all route for invalid paths */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </Router>
