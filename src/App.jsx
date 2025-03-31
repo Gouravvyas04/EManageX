@@ -49,7 +49,7 @@ const App = () => {
         <Routes>
           {/* Redirect to login if not logged in */}
           <Route
-            path="/EManageX/"
+            path="/"
             element={
               !user ? (
                 <Login handleLogin={handleLogin} />
@@ -66,7 +66,7 @@ const App = () => {
               user === "admin" ? (
                 <AdminDashboard changeUser={setUser} />
               ) : (
-                <Navigate to="/EManageX/" replace />
+                <Navigate to="/" replace />
               )
             }
           />
@@ -78,13 +78,13 @@ const App = () => {
               user === "employee" ? (
                 <EmployeeDashboard changeUser={setUser} data={loggedInUserData} />
               ) : (
-                <Navigate to="/EManageX/" replace />
+                <Navigate to="/" replace />
               )
             }
           />
 
           {/* Catch-all route for invalid paths */}
-          <Route path="*" element={<Navigate to="/EManageX/" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </Router>
