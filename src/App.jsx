@@ -84,7 +84,7 @@ const App = () => {
           />
 
           {/* Catch-all route for invalid paths */}
-          <Route path="*" element={<Navigate to="/EManageX" replace />} />
+          <Route path="*" element={<Navigate to="/EManageX/" replace />} />
         </Routes>
       </div>
     </Router>
