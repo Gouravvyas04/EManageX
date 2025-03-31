@@ -16,14 +16,11 @@ const AdminDashboard = ({ changeUser }) => {
         setTasks(employees.length > 0 ? employees[0].tasks : []);
     }, []);
 
-    // ✅ Function to handle new task creation with unique ID
     const handleTaskCreated = (newTask) => {
-        const uniqueTask = { ...newTask, taskId: crypto.randomUUID() }; // Assign unique ID
+        const uniqueTask = { ...newTask, taskId: crypto.randomUUID() };
 
-        // Update the tasks list
         setTasks((prevTasks) => [...prevTasks, uniqueTask]);
 
-        // Save updated tasks to localStorage
         const employees = JSON.parse(localStorage.getItem("employees")) || [];
         if (employees.length > 0) {
             employees[0].tasks.push(uniqueTask);
@@ -38,7 +35,6 @@ const AdminDashboard = ({ changeUser }) => {
             <Header changeUser={changeUser} />
 
             <div className="mt-10 space-y-12">
-                {/* Create Task Button */}
                 {!showCreateTaskForm && (
                     <div className="flex justify-center">
                         <button
@@ -57,7 +53,6 @@ const AdminDashboard = ({ changeUser }) => {
                     </section>
                 )}
 
-                 {/* View Progress Stats Button */}
                 {!showCreateEmployeeForm && (
                     <div className="flex justify-center mt-6">
                         <button
@@ -71,7 +66,6 @@ const AdminDashboard = ({ changeUser }) => {
 
                 {showProgressPopup && <EmployeeProgressGraph onClose={() => setShowProgressPopup(false)} />}
 
-                {/* Add Employee Button */}
                 {!showCreateEmployeeForm && (
                     <div className="flex justify-center">
                         <button
@@ -90,8 +84,6 @@ const AdminDashboard = ({ changeUser }) => {
                     </section>
                 )}
 
-
-                {/* All Tasks Section */}
                 <section className="bg-[#222636] p-10 rounded-lg shadow-xl">
                     <h2 className="text-4xl font-semibold text-[#F4F7FF] mb-8">All Tasks</h2>
                     <AllTask tasks={tasks} />
